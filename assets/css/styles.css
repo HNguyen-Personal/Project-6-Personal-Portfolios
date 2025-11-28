@@ -100,6 +100,10 @@ header .header {
    background: #fbfaff;
 }
 
+.hero .container .hero__info {
+   padding: 0;
+}
+
 .hero .row {
    margin: 0;
 }
@@ -109,12 +113,11 @@ header .header {
 }
 .hero__info--header {
    margin-top: 13.7rem;
-   width: 100%;
    color: #080415;
    font-size: 8rem;
    font-weight: 500;
    line-height: 0.95;
-   letter-spacing: -0.32rem;
+   letter-spacing: -0.1rem;
    margin-left: -30px;
 }
 
@@ -169,7 +172,7 @@ header .header {
    align-items: flex-end;
 }
 
-.clients__header{
+.clients__header {
    display: flex;
    gap: 1.3rem;
    position: relative;
@@ -180,7 +183,7 @@ header .header {
    height: 2px;
    background-color: var(--primary-color);
    position: relative;
-   top:20px;
+   top: 20px;
 }
 /* .clients__header--title::before {
    content: "";
@@ -208,16 +211,21 @@ header .header {
    grid-auto-flow: row dense;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-   gap: 36px 0px;
+   gap: 3.6rem 7rem;
    grid-template-areas:
       ". . . ."
       ". . . .";
+}
+
+.clients .container .clients__list {
+   /* padding-left: 5.5rem; */
 }
 
 .client__item {
    display: flex;
    align-items: center;
    gap: 1.3rem;
+   /* justify-content: end; */
 }
 
 .client__item .client--logo {
