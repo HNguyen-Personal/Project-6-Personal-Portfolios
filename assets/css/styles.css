@@ -313,3 +313,86 @@ header .header {
    font-weight: 400;
    line-height: 1.67;
 }
+/* ----------Project Section------------ */
+
+.projects {
+   margin-top: 14rem;
+   background-color: var(--primary-color);
+   padding: 8.6rem 0;
+}
+.projects__heading {
+   display: flex;
+   align-items: center;
+}
+
+.projects__heading--title {
+   color: #fff;
+   font-size: 5.6rem;
+   font-weight: 500;
+   line-height: 1.18;
+   letter-spacing: -0.224rem;
+}
+
+.projects__heading .projects__heading--desc {
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 1.66;
+   /* margin-left: calc(var(--spacer) / 2 * 3); */
+   padding-left: calc(var(--spacer) / 2 * 3);
+}
+
+.projects .container .row-1 {
+   margin-top: 7rem;
+}
+.projects .container .row-2 {
+   margin-top: 3rem;
+}
+
+.projects__item {
+   background: #fbfaff;
+   display: flex;
+   padding: 2.3rem 2.3rem 2.3rem 3.4rem;
+   align-items: center;
+   gap: 4.7rem;
+}
+
+.projects__item--title {
+   color: #080415;
+   font-size: 3.2rem;
+   font-weight: 500;
+   line-height: 1.25;
+   letter-spacing: -0.128rem;
+}
+
+.projects__item--desc {
+   color: #51586a;
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 1.44;
+   margin-top: 1rem;
+}
+
+.projects__item--link {
+   display: inline-block;
+   margin-top: 2rem;
+   color: #080415;
+   font-size: 1.8rem;
+   font-weight: 700;
+   line-height: 1.66;
+   text-decoration-line: underline;
+   text-decoration-style: solid;
+   text-decoration-skip-ink: none;
+   text-decoration-thickness: auto;
+   text-underline-offset: auto;
+   text-underline-position: from-font;
+}
+
+.projects .btn {
+   margin: 8rem auto 0;
+   background: #fff;
+   color: #080415;
+   font-size: 1.8rem;
+   font-weight: 700;
+   line-height: 1.66;
+}
