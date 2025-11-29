@@ -18,6 +18,7 @@ html {
 }
 
 body {
+   color: #080415;
    font-family: var(--font-family), sans-serif;
    font-size: 1.6rem; /* 16px */
    margin: 0;
@@ -25,7 +26,15 @@ body {
 }
 
 a {
+   color: inherit;
+   font-size: inherit;
    text-decoration: none;
+   text-decoration-line: underline;
+   text-decoration-style: solid;
+   text-decoration-skip-ink: none;
+   text-decoration-thickness: auto;
+   text-underline-offset: auto;
+   text-underline-position: from-font;
 }
 
 .container {
@@ -39,6 +48,27 @@ a {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+p {
+   color: #51586a;
+}
+
+h2 {
+   font-family: var(--font-family);
+   font-size: 5.6rem;
+   font-weight: 500;
+   line-height: 1.18;
+   letter-spacing: -0.224rem;
+}
+
+.lvl3 {
+   color: #080415;
+   font-family: var(--font-family);
+   font-size: 3.2rem;
+   font-weight: 500;
+   line-height: 1.25;
+   letter-spacing: -0.128rem;
 }
 /* -------------common END------------ */
 /* ------------HEADER------------- */
@@ -70,15 +100,8 @@ header .header {
 }
 
 .contact--email-address {
-   color: #080415;
    font-size: 2.2rem;
    font-weight: 500;
-   text-decoration-line: underline;
-   text-decoration-style: solid;
-   text-decoration-skip-ink: none;
-   text-decoration-thickness: auto;
-   text-underline-offset: auto;
-   text-underline-position: from-font;
 }
 
 .header__nav-bar {
@@ -88,6 +111,7 @@ header .header {
 }
 
 .nav-bar__item a {
+   text-decoration: none;
    color: #51586a;
    font-size: 1.8rem;
    font-weight: 400;
@@ -113,7 +137,6 @@ header .header {
 }
 .hero__info--header {
    margin-top: 13.7rem;
-   color: #080415;
    font-size: 8rem;
    font-weight: 500;
    line-height: 0.95;
@@ -124,7 +147,6 @@ header .header {
    margin-top: 2rem;
    width: 74%;
    width: 37rem;
-   color: #51586a;
    font-size: 1.8rem;
    font-weight: 400;
    line-height: 1.66;
@@ -137,27 +159,19 @@ header .header {
    gap: 3rem;
 }
 
-.hero__cta .btn {
+.hero__cta .btn a {
    color: #fdfdfd;
    font-size: 1.8rem;
    font-weight: 700;
 }
 
 .hero__cta a {
-   color: #080415;
    font-size: 1.8rem;
    font-weight: 700;
-   text-decoration-line: underline;
-   text-decoration-style: solid;
-   text-decoration-skip-ink: none;
-   text-decoration-thickness: auto;
-   text-underline-offset: auto;
-   text-underline-position: from-font;
 }
 
 .hero__socials {
    margin-top: 10.4rem;
-   margin-left: -30px;
    display: flex;
    align-items: center;
    gap: 1.5rem;
@@ -213,7 +227,6 @@ header .header {
 .clients__header--title {
    display: flex;
    gap: 1.3rem;
-   color: #080415;
    font-size: 4.6rem;
    font-weight: 500;
    line-height: 1.2;
@@ -222,14 +235,23 @@ header .header {
    /* width: 32.5rem; */
 }
 .clients__list {
-   display: grid;
+   /* display: grid;
    grid-auto-flow: row dense;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr 1fr;
    gap: 3.6rem 7rem;
    grid-template-areas:
       ". . . ."
-      ". . . .";
+      ". . . ."; */
+/* Ở đây cậu nên sử dụng giá trị min-content cho mỗi cột trong grid container và justify-content: space-between để các item giãn cách đều nha. Trong bài cậu đang tính toán khoảng cách giữa các cột thủ công là 100px để cột cuối có thể giãn tới sát viền ngoài cột 12.
+
+ */
+   /* Solution của F8 */
+   display: grid;
+   grid-template-columns: repeat(4, min-content);
+   grid-template-rows: repeat(2, min-content);
+   justify-content: space-between;
+   row-gap: 3.6rem;
 }
 
 .clients .container .clients__list {
@@ -259,16 +281,10 @@ header .header {
 
 .specialties__heading {
    text-align: center;
-   color: #080415;
-   font-size: 5.6rem;
-   font-weight: 500;
-   line-height: 1.18;
-   letter-spacing: -0.224rem;
 }
 
 .specialties__desc {
    width: 53.4rem;
-   color: #51586a;
    text-align: center;
    margin: 2rem auto 0;
    font-size: 1.8rem;
@@ -299,16 +315,10 @@ header .header {
 
 .specialties__item .item--title {
    margin-top: 2.2rem;
-   color: #080415;
-   font-size: 3.2rem;
-   font-weight: 500;
-   line-height: 1.25;
-   letter-spacing: -0.128rem;
 }
 
 .specialties__item .item--desc {
    margin-top: 1.5rem;
-   color: #51586a;
    font-size: 1.8rem;
    font-weight: 400;
    line-height: 1.67;
@@ -327,10 +337,6 @@ header .header {
 
 .projects__heading--title {
    color: #fff;
-   font-size: 5.6rem;
-   font-weight: 500;
-   line-height: 1.18;
-   letter-spacing: -0.224rem;
 }
 
 .projects__heading .projects__heading--desc {
@@ -358,7 +364,6 @@ header .header {
 }
 
 .projects__item--title {
-   color: #080415;
    font-size: 3.2rem;
    font-weight: 500;
    line-height: 1.25;
@@ -366,7 +371,6 @@ header .header {
 }
 
 .projects__item--desc {
-   color: #51586a;
    font-size: 1.6rem;
    font-weight: 400;
    line-height: 1.44;
@@ -376,10 +380,53 @@ header .header {
 .projects__item--link {
    display: inline-block;
    margin-top: 2rem;
-   color: #080415;
    font-size: 1.8rem;
    font-weight: 700;
    line-height: 1.66;
+}
+
+.projects .btn {
+   margin: 8rem auto 0;
+   background: #fff;
+}
+
+.projects .btn a {
+   font-size: 1.8rem;
+   font-weight: 700;
+   line-height: 1.66;
+}
+
+/* ---------------Intro section---------------- */
+
+.intro {
+   margin-top: 14rem;
+}
+
+.intro__hello {
+   text-align: center;
+   color: var(--primary-color);
+   font-size: 3.2rem;
+   font-weight: 500;
+   line-height: 1.25;
+   letter-spacing: -0.128rem;
+}
+
+.intro__heading {
+   text-align: center;
+   margin-top: 1rem;
+}
+.intro__desc {
+   text-align: center;
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 1.66;
+}
+
+.stats__title {
+   font-size: 5.6rem;
+   font-weight: 500;
+   line-height: 1.36;
+   letter-spacing: 0.168rem;
    text-decoration-line: underline;
    text-decoration-style: solid;
    text-decoration-skip-ink: none;
@@ -388,11 +435,276 @@ header .header {
    text-underline-position: from-font;
 }
 
-.projects .btn {
-   margin: 8rem auto 0;
-   background: #fff;
-   color: #080415;
+.stats__desc {
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 1.66;
+}
+
+.intro .container .intro__stats--wrap::before {
+   content: "";
+   width: 94.6rem;
+   display: block;
+   height: 1px;
+   background-color: rgba(8, 4, 21, 0.2);
+   margin: 7rem auto 2rem;
+}
+
+.intro .container .intro__stats--wrap::after {
+   content: "";
+   width: 94.6rem;
+   display: block;
+   height: 1px;
+   background-color: rgba(8, 4, 21, 0.2);
+   margin: 2rem auto 7rem;
+}
+
+.intro__video--wrap {
+   position: relative;
+   /* transform: translateY(50%); */
+}
+
+.intro .container .video-thumb {
+   height: 62.8rem;
+   object-fit: cover;
+}
+
+.video__play-btn {
+   content: "";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 11.1rem;
+   height: 11.1rem;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, 0.7);
+   /* background: rgba(1, 1, 1, 0.7); */
+   backdrop-filter: blur(12px);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.intro__video--link {
+   background-color: #fff;
+   position: absolute;
+   right: 20px;
+   bottom: 7px;
+}
+
+.intro__video--link a {
+   color: #51586a;
    font-size: 1.8rem;
    font-weight: 700;
    line-height: 1.66;
+   text-transform: uppercase;
+}
+
+/* ----------Feedback section--------- */
+
+.feedback {
+   margin-top: -31.4rem;
+   padding-top: 47.3rem;
+   padding-bottom: 7.4rem;
+   background: #fbfaff;
+}
+
+.feedback__heading {
+   text-align: center;
+}
+
+.feedback__desc {
+   margin-top: 2rem;
+   text-align: center;
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 3rem; /* 166.667% */
+}
+
+.client__feedback--wrap {
+   margin-top: 6rem;
+}
+
+.client__quote {
+   margin: 0 auto;
+   max-width: 67.9rem;
+   color: #51586a;
+   text-align: center;
+   font-size: 2.4rem;
+   font-weight: 400;
+   line-height: 1.66;
+}
+
+.client__avatar {
+   width: 3.9833rem;
+   height: 3.9833rem;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+.client__info {
+   text-align: center;
+   margin-top: 3.6rem;
+}
+
+.client__info--wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1.52rem;
+}
+
+.client__name {
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 500;
+   line-height: 4rem; /* 133.333% */
+}
+
+.client__desc {
+   margin-top: 0.32rem;
+   font-size: 1.6rem;
+   font-weight: 400;
+   line-height: 1.81;
+}
+
+.dots {
+   margin-top: 4.2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1.6rem;
+}
+
+.dot {
+   width: 1.6rem;
+   height: 1.6rem;
+   border-radius: 50%;
+   background-color: rgba(8, 4, 21, 0.2);
+}
+
+.dot:hover {
+   background: var(--primary-color);
+   border: #fff solid 0.3rem;
+   outline: var(--primary-color) solid 0.1rem;
+}
+
+/* ---------FAQ----------- */
+.faq {
+   margin-top: 9.5rem;
+}
+.faq__heading {
+   max-width: 57.5rem;
+}
+
+.question__icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   border: 2px solid rgba(22, 26, 28, 0.2);
+   transition: border 0.3s ease-in;
+}
+
+.icon__shape {
+   /* background: var(--primary-color); */
+   background: #161a1c;
+   position: relative;
+   width: 1.5rem;
+   height: 0.2rem;
+   transition: background 0.3s ease;
+}
+
+.icon__shape::after {
+   /* visibility: hidden; */
+   opacity: 0;
+   display: block;
+   content: "";
+   background: var(--primary-color);
+   position: relative;
+   width: 1.5rem;
+   height: 0.2rem;
+   transform: rotate(-90deg);
+   transition: opacity 0.3s ease-in-out;
+}
+
+.question__wrapper {
+   padding: 6rem 16.1rem 0 2.2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+
+.question__wrapper::after {
+   content: "";
+   display: block;
+   width: calc(100% - 16.1rem);
+   height: 0.2rem;
+   background-color: #08182f;
+   position: absolute;
+   margin-left: -2.2rem;
+   /* bottom: 0; */
+   bottom: -1.1rem;
+   transition: background-color 0.3s ease-in;
+}
+
+.question__answer {
+   /* visibility: hidden; */
+   opacity: 0;
+   /* margin-top: 2.3rem;
+   max-width: 48.7rem;  */
+   transition: opacity 0.3s ease;
+}
+
+.question__title {
+   transition: color 0.3s ease-in;
+}
+
+/* hiện dấu + khi checked */
+.faq__wrapper
+   input[type="checkbox"]:checked
+   + .question__wrapper
+   .icon__shape::after {
+   opacity: 1;
+}
+
+/* hiện câu trả lời khi checked */
+.faq__wrapper
+   input[type="checkbox"]:checked
+   + .question__wrapper
+   .question__answer {
+   width: 48.7rem;
+   margin-top: 2.3rem;
+   opacity: 1;
+}
+
+/* di chuyển & đổi màu dấu gạch ngang ở cuối */
+.faq__wrapper input[type="checkbox"]:checked + .question__wrapper::after {
+   bottom: -2.1rem;
+   background-color: rgba(93, 59, 238, 1);
+}
+
+/* Đổi màu câu hỏi */
+.faq__wrapper
+   input[type="checkbox"]:checked
+   + .question__wrapper
+   .question__title {
+   color: var(--primary-color);
+}
+
+/* đổi màu hình icon */
+.faq__wrapper
+   input[type="checkbox"]:checked
+   + .question__wrapper
+   .question__icon {
+   border: 2px solid rgba(93, 59, 238, 0.2);
+}
+
+/* đổi màu dấu "-" có sẵn */
+.faq__wrapper input[type="checkbox"]:checked + .question__wrapper .icon__shape {
+   background: var(--primary-color);
 }
