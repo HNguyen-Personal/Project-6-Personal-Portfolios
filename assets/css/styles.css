@@ -23,6 +23,7 @@ body {
    font-size: 1.6rem; /* 16px */
    margin: 0;
    padding: 0;
+   transition: all 0.35s ease;
 }
 
 a {
@@ -48,6 +49,21 @@ a {
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+}
+
+.btn a {
+   display: block;
+   line-height: 6.2rem;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+
+.btn:hover {
+   transform: translateY(-10px) scale(1.02);
+   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+   opacity: 0.9;
 }
 
 p {
@@ -132,9 +148,6 @@ header .header {
    margin: 0;
 }
 
-.hero > .container {
-   /* background-color: red; */
-}
 .hero__info--header {
    margin-top: 13.7rem;
    font-size: 8rem;
@@ -159,10 +172,13 @@ header .header {
    gap: 3rem;
 }
 
-.hero__cta .btn a {
+.hero__cta--btn a {
    color: #fdfdfd;
-   font-size: 1.8rem;
-   font-weight: 700;
+   display: block;
+   line-height: 6.2rem; /* or use flex same as parent */
+   width: 100%;
+   height: 100%;
+   text-align: center;
 }
 
 .hero__cta a {
@@ -175,6 +191,31 @@ header .header {
    display: flex;
    align-items: center;
    gap: 1.5rem;
+}
+
+.hero__wrap {
+   position: relative;
+   /* overflow: hidden; */
+}
+
+.hero__wrap figure img {
+   position: relative; /* now z-index will work */
+   z-index: 2;
+   margin: 0;
+}
+
+.deco__img--1 {
+   position: absolute;
+   bottom: 0;
+   left: -221px;
+   z-index: 1;
+   pointer-events: none;
+}
+
+.deco__img--2 {
+   position: absolute;
+   right: -212px;
+   bottom: 0;
 }
 
 .social_links {
@@ -243,7 +284,7 @@ header .header {
    grid-template-areas:
       ". . . ."
       ". . . ."; */
-/* Ở đây cậu nên sử dụng giá trị min-content cho mỗi cột trong grid container và justify-content: space-between để các item giãn cách đều nha. Trong bài cậu đang tính toán khoảng cách giữa các cột thủ công là 100px để cột cuối có thể giãn tới sát viền ngoài cột 12.
+   /* Ở đây cậu nên sử dụng giá trị min-content cho mỗi cột trong grid container và justify-content: space-between để các item giãn cách đều nha. Trong bài cậu đang tính toán khoảng cách giữa các cột thủ công là 100px để cột cuối có thể giãn tới sát viền ngoài cột 12.
 
  */
    /* Solution của F8 */
@@ -263,6 +304,11 @@ header .header {
    align-items: center;
    gap: 1.3rem;
    /* justify-content: end; */
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.client__item:hover {
+   transform: translateY(-10px) scale(1.02);
 }
 
 .client__item .client--logo {
@@ -300,6 +346,14 @@ header .header {
    height: 30.6rem;
    background: #fbfaff;
    padding: 3.3rem 4.2rem !important;
+   /* border-radius: 10px; */
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.specialties__item:hover {
+   transform: translateY(-10px) scale(1.02);
+   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+   background: #ffffff;
 }
 
 .specialties__item--icon {
@@ -361,6 +415,14 @@ header .header {
    padding: 2.3rem 2.3rem 2.3rem 3.4rem;
    align-items: center;
    gap: 4.7rem;
+   position: relative;
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.projects__item:hover {
+   transform: translateY(-10px) scale(1.02);
+   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+   background: #ffffff;
 }
 
 .projects__item--title {
@@ -368,6 +430,11 @@ header .header {
    font-weight: 500;
    line-height: 1.25;
    letter-spacing: -0.128rem;
+}
+
+.project__item--info {
+   position: relative;
+   z-index: 2;
 }
 
 .projects__item--desc {
@@ -385,6 +452,17 @@ header .header {
    line-height: 1.66;
 }
 
+.project__item--img {
+   position: relative;
+   z-index: 2;
+}
+
+.project__item_deco {
+   position: absolute;
+   right: 0;
+   z-index: 1;
+}
+
 .projects .btn {
    margin: 8rem auto 0;
    background: #fff;
@@ -393,7 +471,6 @@ header .header {
 .projects .btn a {
    font-size: 1.8rem;
    font-weight: 700;
-   line-height: 1.66;
 }
 
 /* ---------------Intro section---------------- */
@@ -493,7 +570,7 @@ header .header {
    bottom: 7px;
 }
 
-.intro__video--link a {
+.intro__video--link h3 {
    color: #51586a;
    font-size: 1.8rem;
    font-weight: 700;
@@ -508,6 +585,8 @@ header .header {
    padding-top: 47.3rem;
    padding-bottom: 7.4rem;
    background: #fbfaff;
+   position: relative;
+   z-index: -1;
 }
 
 .feedback__heading {
@@ -522,11 +601,11 @@ header .header {
    line-height: 3rem; /* 166.667% */
 }
 
-.client__feedback--wrap {
+.feedback--wrap {
    margin-top: 6rem;
 }
 
-.client__quote {
+.feedback__quote {
    margin: 0 auto;
    max-width: 67.9rem;
    color: #51586a;
@@ -536,33 +615,33 @@ header .header {
    line-height: 1.66;
 }
 
-.client__avatar {
+.feedback__client--avatar {
    width: 3.9833rem;
    height: 3.9833rem;
    object-fit: cover;
    border-radius: 50%;
 }
 
-.client__info {
+.feedback__client__info {
    text-align: center;
    margin-top: 3.6rem;
 }
 
-.client__info--wrap {
+.feedback__client--wrap {
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 1.52rem;
 }
 
-.client__name {
+.feedback__client--name {
    text-align: center;
    font-size: 3rem;
    font-weight: 500;
    line-height: 4rem; /* 133.333% */
 }
 
-.client__desc {
+.feedback__client--desc {
    margin-top: 0.32rem;
    font-size: 1.6rem;
    font-weight: 400;
@@ -588,6 +667,17 @@ header .header {
    background: var(--primary-color);
    border: #fff solid 0.3rem;
    outline: var(--primary-color) solid 0.1rem;
+}
+
+.feedback__deco--1 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+}
+.feedback__deco--2 {
+   position: absolute;
+   bottom: 0;
+   right: 0;
 }
 
 /* ---------FAQ----------- */
