@@ -23,7 +23,7 @@ body {
    font-size: 1.6rem; /* 16px */
    margin: 0;
    padding: 0;
-   transition: all 0.35s ease;
+   transition: 0.35s ease;
 }
 
 a {
@@ -49,7 +49,7 @@ a {
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+   transition: 0.35s ease;
 }
 
 .btn a {
@@ -315,8 +315,7 @@ header .header {
    align-items: center;
    gap: 1.3rem;
    /* justify-content: end; */
-   transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
+   transition: 0.35s ease;}
 
 .client__item:hover {
    transform: translateY(-10px) scale(1.02);
@@ -358,7 +357,7 @@ header .header {
    background: #fbfaff;
    padding: 3.3rem 4.2rem !important;
    /* border-radius: 10px; */
-   transition: transform 0.35s ease, box-shadow 0.35s ease;
+   transition: 0.35s ease;
 }
 
 .specialties__item:hover {
@@ -436,7 +435,7 @@ header .header {
    align-items: center;
    gap: 4.7rem;
    position: relative;
-   transition: transform 0.35s ease, box-shadow 0.35s ease;
+   transition: 0.3s ease;
    /* width: calc(100% - 0.75rem); */
 }
 
@@ -572,7 +571,7 @@ header .header {
 }
 
 .intro .container .video-thumb {
-   height: 62.8rem;
+   /* height: 62.8rem; */
    object-fit: cover;
 }
 
@@ -726,7 +725,7 @@ header .header {
    height: 5rem;
    border-radius: 50%;
    border: 2px solid rgba(22, 26, 28, 0.2);
-   transition: border 0.3s ease-in;
+   transition: 0.3s ease-in;
 }
 
 .icon__shape {
@@ -735,7 +734,7 @@ header .header {
    position: relative;
    width: 1.5rem;
    height: 0.2rem;
-   transition: background 0.3s ease;
+   transition: 0.3s ease;
 }
 
 .icon__shape::after {
@@ -748,7 +747,7 @@ header .header {
    width: 1.5rem;
    height: 0.2rem;
    transform: rotate(-90deg);
-   transition: opacity 0.3s ease-in-out;
+   transition: 0.3s ease;
 }
 
 .question__wrapper {
@@ -769,7 +768,7 @@ header .header {
    margin-left: -2.2rem;
    /* bottom: 0; */
    bottom: -1.1rem;
-   transition: background-color 0.3s ease-in;
+   transition: 0.3s ease-in;
 }
 
 .question__answer {
@@ -778,7 +777,7 @@ header .header {
    opacity: 0;
    /* margin-top: 2.3rem;
    max-width: 48.7rem;  */
-   transition: opacity 0.5s ease, width 0.2s ease;
+   transition: 0.3s ease;
 }
 
 .question__title {
@@ -862,7 +861,6 @@ header .header {
 }
 
 .self-intro__img img {
-   max-width: 37rem;
    object-fit: cover;
 }
 
