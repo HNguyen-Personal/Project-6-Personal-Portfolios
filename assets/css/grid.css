@@ -174,7 +174,7 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
-    --spacer: 24px;
+    --spacer: 10px;
 
     max-width: 540px;
   }

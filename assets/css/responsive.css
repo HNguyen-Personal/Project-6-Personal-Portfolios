@@ -1,0 +1,77 @@
+/* `xs` returns only a ruleset and no media query
+ {  } */
+/* Big PC ONLY */
+@media screen and (min-width: 992px) {
+   .hide-on-pc {
+      display: none;
+   }
+}
+
+/* Tablet  & Small Screen PC*/
+@media screen and (max-width: 991.98px) {
+}
+
+/* Mobile ONLY */
+@media screen and (max-width: 575.98px) {
+   .hide-on-mobile {
+      display: none;
+   }
+   header .header {
+      max-width: 97vw;
+      padding: 2rem 0.7rem 0;
+   }
+   .header__line {
+      width: 100%;
+      height: 1px;
+      background-color: #d6d3e2;
+   }
+   .hero__deco--wrap {
+      order: 2;
+   }
+   .hero__deco--wrap figure {
+      /* width: 97%; */
+      /* overflow: hidden; */
+   }
+   .hero__deco--wrap figure img {
+      display: block;
+      max-height: 35.5rem; /* if you want to cap height */
+      margin: 0 auto; /* center image */ /* easier centering in flex/figure */
+   }
+   .deco__img--1 {
+      max-width: 136%;
+      height: auto;
+      bottom: -54px;
+      left: -75px;
+   }
+   .hero .row {
+      width: 97%;
+   }
+   .hero .container .hero__deco--wrap {
+      width: 100%;
+      margin-top: 5px;
+      overflow: hidden;
+   }
+   .hero .container .hero__info {
+      max-width: 98%;
+   }
+   .hero__info--header {
+      margin-top: 0;
+      color: #080415;
+      font-size: 4.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.19;
+      letter-spacing: -0.168rem;
+   }
+   .hero {
+      /* padding-top: 5.05rem; */
+      padding: 5.05rem 2rem 0;
+      background: #fbfaff;
+   }
+   .hero__cta {
+      margin-top: 3rem;
+   }
+   .hero__socials {
+      margin-top: 2.5rem;
+   }
+}

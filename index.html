@@ -13,6 +13,7 @@
       <link rel="stylesheet" href="./assets/css/reset.css" />
       <link rel="stylesheet" href="./assets/css/grid.css" />
       <link rel="stylesheet" href="./assets/css/styles.css" />
+      <link rel="stylesheet" href="assets/css/responsive.css" />
    </head>
    <body>
       <!-- -------------header start--------- -->
@@ -26,20 +27,23 @@
                   <img src="./assets/img/header/email-icon.svg" alt="" />
                </a>
                <a
-                  class="contact--email-address"
+                  class="contact--email-address hide-on-mobile"
                   href="mailto:hoang.t.nguyen@outlook.com"
                >
                   hoang.t.nguyen@outlook.com
                </a>
             </section>
             <img src="./assets/img/header/header-emoji.svg" alt="" />
-            <ul class="header__nav-bar">
+
+            <ul class="header__nav-bar hide-on-mobile">
                <li class="nav-bar__item"><a href="!#">Projects</a></li>
                <li class="nav-bar__item"><a href="!#">Journey</a></li>
                <li class="nav-bar__item"><a href="!#">Service</a></li>
                <li class="nav-bar__item"><a href="!#">Contact</a></li>
             </ul>
+            
          </section>
+         <div class="header__line hide-on-pc"></div>
       </header>
       <!-- -------------header end--------- -->
 
@@ -47,16 +51,55 @@
       <section class="hero">
          <div class="container">
             <div class="row hero__wrap">
-               <div class="col-lg-5">
+               <div class="hero__deco--wrap col-lg-5 col-sm-12">
                   <!-- <img src="./assets/img/hero/Stripe-1.svg" alt="" /> -->
                   <figure>
                      <img
                         src="./assets/img/hero/potrait.svg"
                         alt="Hoang's Portrait"
                      />
+                     <svg
+                        class="deco__img--1"
+                        width="896"
+                        height="785"
+                        viewBox="0 0 896 785"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                     >
+                        <g opacity="0.1">
+                           <rect
+                              width="139.785"
+                              height="81.4414"
+                              rx="40.7207"
+                              transform="matrix(0.578224 -0.815878 0.794162 0.607706 383.684 194.376)"
+                              fill="#5D3BEE"
+                           />
+                           <rect
+                              width="369.464"
+                              height="81.4414"
+                              rx="40.7207"
+                              transform="matrix(0.578224 -0.815878 0.794162 0.607706 151.442 529.238)"
+                              fill="#5D3BEE"
+                           />
+                           <rect
+                              width="929.458"
+                              height="81.4414"
+                              rx="40.7207"
+                              transform="matrix(0.578224 -0.815878 0.794162 0.607706 101.627 835.754)"
+                              fill="#5D3BEE"
+                           />
+                           <rect
+                              width="346.568"
+                              height="81.4414"
+                              rx="40.7207"
+                              transform="matrix(0.578224 -0.815878 0.794162 0.607706 453.332 562.305)"
+                              fill="#5D3BEE"
+                           />
+                        </g>
+                     </svg>
                   </figure>
                </div>
-               <div class="col-lg-5 offset-lg-2">
+               <div class="col-lg-5 offset-lg-2 col-sm-12">
                   <section class="hero__info">
                      <h2 class="hero__info--header">An Interactive Designer</h2>
                      <p class="hero__info-desc">
@@ -89,46 +132,7 @@
                   </section>
                </div>
                <svg
-                  class="deco__img--1"
-                  width="896"
-                  height="785"
-                  viewBox="0 0 896 785"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-               >
-                  <g opacity="0.1">
-                     <rect
-                        width="139.785"
-                        height="81.4414"
-                        rx="40.7207"
-                        transform="matrix(0.578224 -0.815878 0.794162 0.607706 383.684 194.376)"
-                        fill="#5D3BEE"
-                     />
-                     <rect
-                        width="369.464"
-                        height="81.4414"
-                        rx="40.7207"
-                        transform="matrix(0.578224 -0.815878 0.794162 0.607706 151.442 529.238)"
-                        fill="#5D3BEE"
-                     />
-                     <rect
-                        width="929.458"
-                        height="81.4414"
-                        rx="40.7207"
-                        transform="matrix(0.578224 -0.815878 0.794162 0.607706 101.627 835.754)"
-                        fill="#5D3BEE"
-                     />
-                     <rect
-                        width="346.568"
-                        height="81.4414"
-                        rx="40.7207"
-                        transform="matrix(0.578224 -0.815878 0.794162 0.607706 453.332 562.305)"
-                        fill="#5D3BEE"
-                     />
-                  </g>
-               </svg>
-               <svg
-                  class="deco__img--2"
+                  class="deco__img--2 hide-on-mobile"
                   width="382"
                   height="205"
                   viewBox="0 0 382 205"

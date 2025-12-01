@@ -204,8 +204,13 @@ header .header {
    /* overflow: hidden; */
 }
 
+.hero__deco--wrap {
+   position: relative;
+}
+
+
 .hero__wrap figure img {
-   position: relative; /* now z-index will work */
+   position: relative;
    z-index: 2;
    margin: 0;
 }
@@ -213,7 +218,7 @@ header .header {
 .deco__img--1 {
    position: absolute;
    bottom: 0;
-   left: -221px;
+   left: -201px;
    z-index: 1;
    pointer-events: none;
 }
