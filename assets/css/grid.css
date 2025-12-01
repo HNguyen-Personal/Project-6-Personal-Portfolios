@@ -572,7 +572,6 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
-    --spacer: 30px;
   }
 
   .g-xl-0 {
