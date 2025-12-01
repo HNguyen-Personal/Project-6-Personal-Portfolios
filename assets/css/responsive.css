@@ -9,13 +9,88 @@
 
 /* Tablet  & mobile*/
 @media screen and (max-width: 991.98px) {
+   .hide-on-mobile {
+      display: none;
+   }
+   .toggle-menu {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4.6rem;
+      height: 4.6rem;
+      border-radius: 50%;
+      border: solid 1px rgba(93, 59, 238, 0.2);
+   }
+   .toggle-menu svg {
+      width: 30px;
+      color: #5d3bee;
+   }
+
+   .header img {
+      order: 1;
+   }
+   .header__contact {
+      order: 2;
+   }
+
+   .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 3;
+      /* ẩn overlay đi */
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s ease;
+   }
+
+   .menu-drawer {
+      height: 100vh;
+      position: fixed;
+      inset: 0 0 0 40%;
+      background-color: #fff;
+      z-index: 4;
+      /* ẩn menu drawer đi */
+      transform: translateX(100%);
+      transition: 0.5s ease;
+   }
+   /* Bước 4 --- Lúc checkbox được check thì hiện overlay */
+   .menu-checkbox:checked ~ .menu-overlay {
+      opacity: 1;
+      visibility: visible;
+   }
+   /* Bước 4 --- Lúc checkbox được check thì hiện menu drawer */
+   .menu-checkbox:checked ~ .menu-drawer {
+      transform: translateX(0);
+   }
+
+   .menu-drawer img {
+      display: block;
+      margin: 0 auto;
+   }
+
+   .mobile__nav-bar {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+   }
+   .mobile__nav-bar .nav-bar__item {
+      display: block;
+   }
+   .mobile__nav-bar .nav-bar__item a {
+      text-decoration: none;
+      color: #51586a;
+      font-size: 2.4rem;
+      font-weight: 400;
+      display: block;
+   }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-   .hide-on-mobile {
-      display: none;
-   }
 }
 
 /* Mobile ONLY */
